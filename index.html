@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="primary-header">
+      <span id="nav-label" hidden>Navigation</span>
+
+      <!-- <div class="menu-btn-container"> -->
+      <a class="mobile-logo">EVERY<span class="mobile-underline">W</span>EAR</a>
+
+      <button
+        id="btnOpen"
+        class="menu-btn"
+        aria-expanded="false"
+        aria-labelledby="nav-label"
+      >
+        <img src="./img/hamburger.svg" alt="" />
+      </button>
+
+      <!-- </div> -->
+      <!-- </span> -->
+
+      <nav class="topnav-menu">
+        <button class="close-btn" id="btnClose" aria-label="Close">
+          <img src="img/close.svg" alt="" width="28" height="27" />
+        </button>
+
+        <a class="logo">EVERY<span class="underline">W</span>EAR</a>
+
+        <ul>
+          <li>
+            <a href="">Latest </a>
+            <ul class="submenu">
+              <div class="submenu-wrapper">
+                <a href="" class="submenu-header">Shop All</a>
+                <li><a href="">Clothing</a></li>
+                <li><a href="">Footwear</a></li>
+                <li><a href="">Accessories</a></li>
+              </div>
+              <div class="submenu-wrapper">
+                <li><a href="" class="submenu-header">News</a></li>
+                <li><a href="">News from Reebok</a></li>
+                <li><a href="">New Season from pleasures</a></li>
+                <li><a href="">New to KNowear Arcade</a></li>
+                <li><a href="">New Balance MADE</a></li>
+              </div>
+              <div class="submenu-wrapper">
+                <li><a href="" class="submenu-header">Sale</a></li>
+                <li><a href="">Apparel Sale</a></li>
+                <li><a href="">Footwear Sale</a></li>
+              </div>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Brands </a>
+            <ul class="submenu">
+              <div class="submenu-wrapper">
+                <li><a href="">Adidas</a></li>
+                <li><a href="">Arc'teryx</a></li>
+                <li><a href="">Arcade</a></li>
+                <li><a href="">Asics</a></li>
+                <li><a href="">Briko</a></li>
+                <li><a href="">Canterbury of NZ</a></li>
+                <li><a href="">Carhartt Wip</a></li>
+                <li><a href="">Clearweather</a></li>
+                <li><a href="">Converse</a></li>
+                <li><a href="">Crocs</a></li>
+              </div>
+
+              <div class="submenu-wrapper">
+                <li><a href="">Gramicci</a></li>
+                <li><a href="">Honor the Gift</a></li>
+                <li><a href="">Jason MArkk</a></li>
+                <li><a href="">Levi's</a></li>
+                <li><a href="">Market</a></li>
+                <li><a href="">Medicom</a></li>
+                <li><a href="">New Balance</a></li>
+                <li><a href="">New Balance MAde</a></li>
+                <li><a href="">Off-White</a></li>
+                <li><a href="">Phaidon</a></li>
+              </div>
+
+              <div class="submenu-wrapper">
+                <li><a href="">Pleasures</a></li>
+                <li><a href="">Puma</a></li>
+                <li><a href="">Reebok</a></li>
+                <li><a href="">Reigning Champ</a></li>
+                <li><a href="">Retrosuperfuture</a></li>
+                <li><a href="">Salomon</a></li>
+                <li><a href="">Stampd</a></li>
+                <li><a href="">Stance</a></li>
+                <li><a href="">Taion</a></li>
+              </div>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Categories </a>
+            <ul class="submenu">
+              <div class="submenu-wrapper">
+                <a href="" class="submenu-header category">Clothing</a>
+                <li><a href="">T-Shirts</a></li>
+                <li><a href="">Shirts</a></li>
+                <li><a href="">Crews / Hoods</a></li>
+                <li><a href="">Outwerwear</a></li>
+              </div>
+              <div class="submenu-list">
+                <li><a href="">Pants</a></li>
+                <li><a href="">Denim </a></li>
+                <li><a href="">Shorts</a></li>
+              </div>
+              <div class="submenu-wrapper">
+                <a href="" class="submenu-header category">Footwear</a>
+                <li><a href="">T-Hi-Tops</a></li>
+                <li><a href="">Lows</a></li>
+                <li><a href="">Slides</a></li>
+              </div>
+              <div class="submenu-list">
+                <li><a href="">Kids</a></li>
+                <li><a href="">Shoe-Care </a></li>
+              </div>
+              <div class="submenu-wrapper">
+                <a href="" class="submenu-header category">Accessories</a>
+                <li><a href="">Bags </a></li>
+                <li><a href="">Books</a></li>
+                <li><a href="">Glasses</a></li>
+              </div>
+              <div class="submenu-list">
+                <li><a href="">Headwear</a></li>
+                <li><a href="">Collectables </a></li>
+                <li><a href="">Small Goods </a></li>
+              </div>
+            </ul>
+          </li>
+          <li><a href="">Launches</a></li>
+          <li>
+            <a href=""
+              >Contact
+
+              <ul class="submenu">
+                <div class="submenu-wrapper contact">
+                  <a href="" class="submenu-header address">Everywear</a>
+                  <li class="test">
+                    198 Hepburn St,<br /><br />
+                    Grey Lynn, Grey Lynn,<br /><br />
+                    Auckland, New Zealand
+                  </li>
+                </div>
+                <div class="submenu-wrapper contact">
+                  <a href="" class="submenu-header">Contact</a>
+                  <li><a href="">+64 9 556 7832</a></li>
+                  <li><a href="">online@everywear.co</a></li>
+                </div>
+                <div class="submenu-wrapper contact">
+                  <a href="" class="submenu-header">Social</a>
+                  <li><a href="">Instagram</a></li>
+                  <li><a href="">Facebook</a></li>
+                </div>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="">Search </a>
+
+            <ul class="submenu search">
+              <div class="submenu-wrapper search">
+                <li class="submenu-header">Search</li>
+                <form action="">
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="Your name"
+                  />
+                  <i class="fa-solid fa-arrow-right"></i>
+                </form>
+              </div>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="log-in"><a href="">Log In</a></li>
+          <li class="cart"><a href="">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Slider Section -->
+
+    <div class="container">
+      <div class="list">
+        <div class="slide">
+          <img src="./img/arcade.webp" alt="" />
+          <div class="arcade-banner-text">
+            <p class="banner-text">Arcade Summer '23</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="./img/carhartt.webp" alt="" />
+          <div class="carhartt-banner-text">
+            <p class="banner-text">Carhartt WIP</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="./img/new_balance.webp" alt="" />
+          <div class="nb-banner-text">
+            <p class="banner-text">
+              New Balance Lunar New Year 2024 <br />
+              Collection
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="./img/reebok.webp" alt="" />
+        </div>
+      </div>
+      <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="buttons">
+        <button id="prev" class="prev" title="Previous">&#8249;</button>
+        <button id="next" class="next" title="Next">&#8250;</button>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <main>
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-wrapper">
+            <div class="hero-text-section">
+              <p class="hero-heading hide-mobile">
+                New Balance <br />
+                <span>MADE</span>
+              </p>
+
+              <p class="hero-text hide-mobile">
+                The first drop from the Made in USA Seasonal Collection for
+                Spring/Summer '24 kicks off with new interpretations of classic
+                grey.<br /><br />
+                The 990v6, 990v4 and 998 feature a lighter shade, 'Grey Matter',
+                accented with black and white, outfitted in premium hairy suede
+                with mesh and nubuck. <br /><br />
+                Available from 10am, Thursday 8th Feb.
+              </p>
+            </div>
+            <div class="image-container">
+              <img class="hero-img" src="./img/nb-hero.webp" alt="" />
+            </div>
+          </div>
+          <div class="product-grid new-balance">
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">New Balance</p>
+                <img class="product-img" src="./img/nb01.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">
+                    990v Made in USA - Grey Black
+                  </p>
+                  <p class="product-price">$370.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">New Balance</p>
+                <img class="product-img" src="./img/nb02.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">
+                    990v6 Made in USA - Grey Black
+                  </p>
+                  <p class="product-price">$370.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">New Balance</p>
+                <img class="product-img" src="./img/nb03.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">
+                    990v4 Made in USA - Grey Black
+                  </p>
+                  <p class="product-price">$370.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">New Balance</p>
+                <img class="product-img" src="./img/nb04.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">
+                    990v Made in USA - Grey Black
+                  </p>
+                  <p class="product-price">$370.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lunar-section">
+        <div class="lunar-container">
+          <div class="lunar-wrapper">
+            <div class="lunar-text-section">
+              <p class="hero-heading lunar">
+                New Balance Lunar New Year 2024 Collection
+              </p>
+              <p class="lunar-text">
+                In celebration of the Year of the Dragon, the New Balance Lunar
+                New Year 2024 collection is inspired by the power, confidence,
+                and creativity of the most auspicious zodiac signs.
+                <br /><br />
+                Available from 10am, Friday 5th Jan.
+              </p>
+              <div class="product-grid-two lunar-mobile">
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">New Balance</p>
+                    <img
+                      class="product-img"
+                      src="./img/nb-lunar01.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">1906N LNY - Sea Salt</p>
+                      <p class="product-price">$250.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">New Balance</p>
+                    <img
+                      class="product-img"
+                      src="./img/nb-lunar02.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">1906N LNY - Shell Pink</p>
+                      <p class="product-price">$250.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">New Balance</p>
+                    <img
+                      class="product-img"
+                      src="./img/nb-lunar03.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">610T LNY - Green</p>
+                      <p class="product-price">$200.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">New Balance</p>
+                    <img
+                      class="product-img"
+                      src="./img/nb-lunar04.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">610T LNY - Navy</p>
+                      <p class="product-price">$200.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-container lunar">
+              <img class="lunar-img" src="./img/lunar-main.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gramicci-section">
+        <div class="gramicci-container">
+          <div class="gramicci-wrapper">
+            <div class="gramicci-text-section hide-mobile">
+              <p class="hero-heading">New Season Gramicci</p>
+              <p class="gramicci-text">
+                Gramicci was born from the imagination of a stonemaster climber
+                who invented what has become the standard in adventure outdoor
+                apparel.
+                <br /><br />
+                Shop our latest delivery. Available in <br />store now...
+              </p>
+            </div>
+            <div class="image-container">
+              <img class="gramicci-img" src="./img/gramicci-main.webp" alt="" />
+            </div>
+          </div>
+          <div class="product-grid gramicci">
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">Gramicci</p>
+                <img class="product-img" src="./img/gramicci-01.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">G-Shorts - US Chino</p>
+                  <p class="product-price">$150.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">Gramicci</p>
+                <img class="product-img" src="./img/gramicci-02.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">G-Shorts - Dark Brown</p>
+                  <p class="product-price">$150.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">Gramicci</p>
+                <img class="product-img" src="./img/gramicci-03.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">G-Shorts - Stone</p>
+                  <p class="product-price">$150.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-section">
+              <div class="product-card">
+                <p class="product-title">Gramicci</p>
+                <img class="product-img" src="./img/gramicci-04.webp" alt="" />
+                <div class="product-details">
+                  <p class="product-description">Summit Tee - White</p>
+                  <p class="product-price">$120.00 <span>NZD</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reebok-section">
+        <div class="reebok-container">
+          <div class="reebok-wrapper">
+            <div class="reebok-text-section">
+              <p class="hero-heading">Aries x Reebok Classic</p>
+              <p class="reebok-text">
+                London-based streetwear label Aries have collaborated with
+                reebok for the first time on a pair of Classic Leather trainers.
+                <br /><br />
+                Inspired by mystics, wizards and magicians, the shoes are tinted
+                in the faintest aqua and stamped with gold, to represent the
+                brand's signature colourway without pushing things too far away
+                from the pure white the Reebok Classic is known for.
+                <br /><br />
+                Available now.
+              </p>
+              <div class="reebok-grid">
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">Reebok</p>
+                    <img
+                      class="product-img"
+                      src="./img/reebok-01.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">
+                        Aries Classic Leather - Opal Glow
+                      </p>
+                      <p class="product-price">$220.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">Reebok</p>
+                    <img
+                      class="product-img"
+                      src="./img/reebok-02.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">
+                        Eames Beatnik - Vintage Chalk
+                      </p>
+                      <p class="product-price">$200.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">Reebok</p>
+                    <img
+                      class="product-img"
+                      src="./img/reebok-03.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">
+                        Eames Beatnik - Alabaster Black
+                      </p>
+                      <p class="product-price">$200.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-card-section">
+                  <div class="product-card">
+                    <p class="product-title">Reebok</p>
+                    <img
+                      class="product-img"
+                      src="./img/reebok-04.webp"
+                      alt=""
+                    />
+                    <div class="product-details">
+                      <p class="product-description">
+                        ATR Pump Vertical - Black White
+                      </p>
+                      <p class="product-price">$300.00 <span>NZD</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="image-container">
+              <img class="reebok-img" src="./img/reebok-main.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Foter -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-wrapper">
+          <div class="footer-logo">
+            <a>EVERY<span class="underline">W</span>EAR</a>
+          </div>
+
+          <div class="footer-contact">
+            <p class="contact-header">Contact</p>
+            <p class="address">
+              198 Hepburn street <br />
+              New Zealand
+            </p>
+            <br />
+            <p class="footer-phone">
+              + 64 9 556 7832 <br />online@everywear.co
+            </p>
+          </div>
+          <div class="footer-info">
+            <p class="info-title">Info</p>
+            <ul class="info-list">
+              <li><a href="">Shipping</a></li>
+              <li><a href="">Returns</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Afterpay</a></li>
+              <li><a href="">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <p class="socials-header">Follow Us</p>
+            <a class="social" href="">Instagram</a>
+            <a class="social" href="">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

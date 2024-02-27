@@ -1,0 +1,1553 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Libre+Caslon+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  --logo-color: black;
+  --nav-link: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Caslon Text", serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  /* justify-content: center;
+  align-items: center;
+  width: 1300px;
+
+  max-width: 1500px;
+  max-width: 100vw;
+
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid red; */
+  width: 1300px;
+  max-width: 100vw;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  width: max-content;
+  border: 1px solid red;
+  transition: 1s;
+}
+
+.container .list img {
+  width: 1300px;
+  /* height: 450px; */
+  max-width: 100vw;
+  object-fit: cover;
+}
+
+.container .buttons {
+  position: absolute;
+  top: 33%;
+  left: 2%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  /* background-color: white; */
+}
+
+.container .buttons button {
+  width: 50px;
+  height: 80px;
+  border-radius: 10%;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  transition: all 0.6s ease;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.container .buttons button:hover {
+  background-color: #b5b5b5;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  right: -100%;
+  bottom: 77px;
+  left: -1320px;
+  /* border: 1px solid green;
+
+  /* border: 1px solid green; */
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 8px;
+  height: 8px;
+  color: #333;
+  border-radius: 10%;
+  background-color: #b5b5b5;
+}
+
+.dots-container span.dot.active {
+  width: 30px;
+  background-color: white;
+}
+/* .arcade-banner-text {
+  position: absolute;
+  color: white;
+  top: 337px;
+  left: 737px;
+  color: white;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 25px;
+  opacity: 0.9;
+}
+
+.carhartt-banner-text {
+  position: absolute;
+
+  top: 337px;
+  left: 737px;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 30px;
+  color: white;
+} */
+
+/* .nb-banner-text {
+  position: absolute;
+
+  top: 92px;
+  left: 490px;
+  font-family: "Libre Caslon Text", serif;
+  font-size: 30px;
+  color: white;
+} */
+
+/* .container .slide {
+  display: none;
+  width: 100%;
+  transition: transform 0.5s;
+} */
+
+/* .container .list .slide.fade {
+  animation: fadeIn 0.9s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+} */
+
+/* .container .slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100vw;
+} */
+/* 
+.container .prev,
+.container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  width: 50px;
+  margin-top: 300px;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  height: 80px;
+  transition: all 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+} */
+
+/* .container .prev:hover,
+.container .next:hover {
+  background-color: #b5b5b5;
+  color: red;
+} */
+
+/* .container .prev {
+  left: 2px;
+  top: -100px;
+} */
+
+/* .container .next {
+  right: 130px;
+  top: -100px;
+  color: red;
+} */
+
+/* .dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  right: 50%;
+  bottom: 5px;
+} */
+
+/* .dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 8px;
+  height: 8px;
+  color: #333;
+  border-radius: 10%;
+  background-color: #b5b5b5;
+} */
+
+/* .dots-container .dot.active {
+  background: #fff;
+} */
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* NAVBAR */
+header {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* border: 1px solid green; */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 5em;
+}
+
+.primary-header.sticking nav ul li a {
+  color: var(--nav-link);
+}
+
+.primary-header.sticking nav .log-in {
+  color: var(--nav-link);
+}
+
+.primary-header.sticking nav .cart {
+  color: var(--nav-link);
+}
+
+.primary-header.sticking {
+  background-color: #fff;
+  transition: 1s ease;
+}
+
+.primary-header.sticking nav .logo {
+  color: black;
+}
+
+.primary-header.sticking nav .underline {
+  border-bottom: 2px solid black;
+}
+
+header nav {
+  /* padding: 1.5em 0 1.5em 5em; */
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.underline {
+  border-bottom: 2px solid white;
+  /* width: 1px;
+  height: 13px;
+  font-weight: 500;
+  text-decoration: underline; */
+}
+header ul {
+  display: flex;
+  margin-top: 10px;
+}
+
+.log-in {
+  margin-top: 6px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+header nav ul li {
+  margin: 2px 15px;
+  padding: 5px 15px;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+header:hover {
+  background-color: #fff;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav ul li a {
+  color: black;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav .logo {
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  transition: 0.4s ease-in;
+}
+
+header:hover nav .underline {
+  border-bottom: 2px solid black;
+  /* transition: 0.2s ease; */
+}
+
+header nav ul li a:hover {
+  opacity: 0.4;
+  transition: 0.4s ease;
+}
+
+.cart {
+  margin-top: 6px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+.log-in:hover {
+  opacity: 0.4;
+  transition: 0.4s ease;
+  margin-top: 6px;
+}
+
+/* header nav ul.submenu li:hover {
+  opacity: 0.4;
+  transition: 0.4s ease;
+} */
+
+/* SUB MENU STYLE */
+
+.submenu {
+  position: fixed;
+  left: 0;
+  height: 250px;
+  background-color: #fff;
+  /* top: 100%; */
+  /* padding: 10px; */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 69px;
+  /* gap: -25px; */
+  /* border: 1px solid green; */
+  gap: 110px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  /* transition: 0.2s 1s; */
+  transition: 0.2s 0.1s;
+}
+
+.submenu:hover {
+  background-color: #fff;
+}
+
+.submenu .submenu-header {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.submenu li {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin: 0;
+  font-size: 11.4px;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.submenu li a {
+  font-size: 11.4px;
+}
+li:hover ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+  transition-delay: 0s;
+}
+
+.submenu-wrapper.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* border: 1px solid red; */
+}
+
+.submenu-wrapper.contact .submenu-header.address {
+  /* color: red; */
+  /* margin: 0; */
+  text-align: left;
+}
+.submenu-wrapper.search {
+  /* display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  border: 1px solid red; */
+}
+
+.submenu.search {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 30px; */
+  /* border: 1px solid red; */
+}
+
+.submenu.search .submenu-header {
+  position: relative;
+  top: -80px;
+  left: 140px;
+}
+
+.submenu.search form {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  /* left: 0; */
+  right: 70px;
+  top: 40%;
+}
+
+.submenu.search form input {
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.submenu.search form input:focus {
+  outline: none;
+}
+
+.submenu.search form input::placeholder {
+  font-style: italic;
+}
+
+.submenu-wrapper.search li {
+  margin-top: 60px;
+}
+
+.submenu-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  /* border: 1px solid lime; */
+  position: relative;
+  bottom: -15px;
+}
+/* header ul .submenu {
+  border: 1px solid red;
+  position: absolute;
+  max-width: 100vw;
+  height: 200px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -999;
+  transition: all ease 1.5s;
+} */
+header ul .submenu {
+  /* width: 100%;
+  border: 1px solid red;
+  position: absolute;
+  height: 0;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -999;
+  left: 0; */
+  /* opacity: 0; */
+  /* border: 1px solid red;
+  position: relative;
+  left: 0;
+  height: 200px;
+  background-color: #fff;
+  width: 100vw; */
+  /* display: flex;
+  flex-direction: column;
+  opacity: 1;
+  align-items: center;
+  justify-content: space-between; */
+  /* position: relative;
+  left: 0; */
+  /* width: 1300px; */
+  /* background-color: #fff;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; */
+}
+
+header ul .submenu li {
+  /* font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0; */
+}
+
+/* justify-content: space-between; */
+
+/* header ul .submenu li:last-child {
+  margin-top: 0;
+}
+
+header ul .submenu li a {
+  font-size: 10px;
+}
+
+.submenu-header {
+  font-size: 20px;
+} */
+
+header ul .submenu li {
+  /* z-index: 1;
+  display: flex;
+  flex-direction: column; */
+}
+
+/* header ul .submenu li a {
+  display: flex;
+} */
+
+/* .submenu,
+.submenu-items,
+.submenu-header {
+} */
+
+header ul li:hover .submenu {
+  /* z-index: 99;
+  opacity: 1;
+  height: 200px;
+  transition: height ease-in-out 0.4s; */
+  /* margin-bottom: 0; */
+  /* margin-top: 0;
+  transition: margin-top ease-in-out 1.4s; */
+}
+
+/* Hero Section */
+
+.hero {
+  /* border: 1px solid red; */
+  margin: 130px 0px;
+  height: 500px;
+}
+
+.hero-img {
+  width: 650px;
+  height: 700px;
+  margin-left: 150px;
+}
+.hero-wrapper {
+  /* border: 1px solid green; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+  /* border: 1px solid green; */
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-container {
+}
+.hero-text-section {
+  /* border: 1px solid rgb(61, 48, 24); */
+  width: 32%;
+  padding: 20px 60px;
+  margin-left: 80px;
+  height: 50%;
+}
+
+.hero-heading {
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.hero-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 350px; */
+  grid-template-rows: 400px 500px;
+  margin-top: -320px;
+}
+
+.product-grid-two {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 400px 500px;
+  margin-left: -302px;
+}
+
+.product-card-section {
+  /* margin: 50px 42px; */
+  margin: 50px 42px;
+
+  /* padding: 10px 0px; */
+}
+.product-card {
+  background: #f1f1f1;
+  width: 256px;
+  height: 370px;
+  margin-bottom: -20px;
+}
+
+.product-img:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-title:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-description:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.product-price:hover {
+  transition: 0.2s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.product-card .product-img {
+  width: 250px;
+  height: 250px;
+}
+.product-title {
+  font-family: "Lato", sans-serif;
+  padding: 20px 10px;
+}
+
+.product-description {
+  font-size: 12px;
+  font-family: "Libre Caslon Text", serif;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid lime; */
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.product-price {
+  /* color: red; */
+  font-size: 14px;
+}
+
+.product-price span {
+  font-size: 4.9px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* LUNAR SECTION */
+
+.lunar-section {
+  margin-top: 766px;
+  /* border: 1px solid red; */
+  /* height: 500px; */
+}
+
+.lunar-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  position: relative;
+  left: 50px;
+  line-height: 1.3;
+}
+
+.lunar-text-section {
+  width: 357px;
+  padding: 20px 60px;
+  height: 50%;
+
+  /* border: 1px solid green; */
+}
+
+.lunar-img {
+  width: 665px;
+  height: 650px;
+  margin-left: -58px;
+}
+
+.lunar-wrapper {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  /* margin-right: 223px;
+  margin-left: 39px; */
+}
+
+.lunar-grid {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 500px; */
+  grid-template-rows: 400px 350px;
+  margin-left: -300px;
+  /* grid-gap: 50px; */
+}
+
+/* Gramicci Section */
+.gramicci-section {
+  margin-top: 178px;
+}
+
+.gramicci-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  position: relative;
+  left: 50px;
+}
+
+.gramicci-text-section {
+  /* border: 1px solid rgb(23, 12, 227); */
+  width: 481px;
+  padding: 20px 60px;
+}
+
+.gramicci-img {
+  width: 600px;
+  height: 650px;
+}
+
+.gramicci-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-grid.gramicci {
+  margin-top: -440px;
+}
+
+/* Reebok Section */
+
+.reebok-section {
+  margin-top: 197px;
+}
+.reebok-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  /* border: 1px solid green; */
+}
+
+.reebok-text-section {
+  width: 357px;
+  padding: 20px 45px;
+  /* border: 1px solid blue; */
+  height: 50%;
+}
+
+.reebok-text {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  position: relative;
+  left: 50px;
+  line-height: 1.3;
+}
+
+.reebok-img {
+  width: 500px;
+  height: 650px;
+}
+
+.reebok-grid {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  /* grid-template-rows: 400px 500px; */
+  grid-template-rows: 400px 350px;
+  margin-left: -261px;
+}
+
+footer {
+  margin-top: 215px;
+  background-color: black;
+  height: 301px;
+  /* padding: 60px 0; */
+}
+
+.footer-wrapper {
+  border: 1px solid black;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: 20px 10px;
+  max-width: 80%;
+}
+
+.footer-logo {
+  position: relative;
+  left: -68px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.contact-header {
+  color: #fff;
+}
+
+p.address {
+  font-family: "Lato", sans-serif;
+  padding: 5px 0;
+  color: #fff;
+}
+
+p.footer-phone {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+.footer-info .info-title {
+  color: #fff;
+}
+
+.footer-info ul li {
+  list-style: none;
+}
+
+.footer-info ul li a {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+.footer-info .info-title {
+  /* line-height: 1.3; */
+  margin-bottom: 5px;
+}
+
+.footer-socials .socials-header {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.footer-socials a {
+  color: #fff;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  mobile nav */
+
+.close-btn {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+.menu-btn-container {
+  display: none;
+}
+
+.menu-btn[aria-expanded="true"] {
+  + .topnav-menu {
+    translate: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-logo {
+    display: block;
+    /* background-color: red !important; */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 22px 14px;
+  }
+
+  .mobile-underline {
+    border-bottom: 2px solid black;
+  }
+  header nav {
+    background-color: black;
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    overflow: hidden;
+
+    align-items: flex-start;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+    /* display: none; */
+  }
+
+  .menu-btn-container {
+    /* border: 1px solid red; */
+    display: flex;
+    /* background-color: red; */
+    /* flex-wrap: wrap; */
+    /* width: 76px;
+    height: 68px;
+    position: absolute;
+    right: 0;
+    padding: 20px 0; */
+    /* z-index: -100; */
+    /* display: block; */
+    width: 76px;
+    height: 68px;
+    position: absolute;
+    right: 0;
+    padding: 20px 40px;
+  }
+
+  /* .menu-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  } */
+  .menu-btn {
+    /* display: block;
+    color: black;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    left: 870px; */
+    /* max-width: ; */
+    background: none;
+    border: none;
+    display: block;
+    /* z-index: 2000; */
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    /* position: absolute;
+    right: 0;
+    top: 20px;
+    left: 835px;
+    max-width: 100%;
+    flex-wrap: wrap; */
+  }
+
+  .close-btn {
+    display: block;
+
+    /* display: block; */
+    /* border: none;
+    background: none;
+    padding: 20px 40px;
+    width: 2.5rem; */
+    /* margin-inline-start: auto; */
+    /* margin-top: -223px;
+    margin-right: 79px;
+    overflow: hidden;  */
+    /* position: absolute;
+    left: 879px; */
+    position: absolute;
+    right: 20px;
+    border: none;
+    background: none;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  header nav .logo {
+    color: white !important;
+    padding: 20px 0;
+  }
+
+  .underline {
+    border-bottom: 2px solid white !important;
+  }
+  header nav ul li a {
+    color: white !important;
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left: -46px;
+    top: -7px;
+    padding: 10px 20px;
+  }
+
+  li:hover ul.submenu {
+    display: none;
+  }
+
+  header nav .log-in {
+    display: none;
+  }
+
+  header nav .cart {
+    display: none;
+  }
+
+  header {
+    background-color: #fff;
+    position: fixed;
+    overflow: hidden;
+  }
+
+  header:hover {
+    display: block;
+  }
+}
+
+/* //MEDIA QUERIES */
+
+/* @media (min-width: 500px) {
+
+
+
+
+
+ 
+
+  
+}
+
+@media (min-width: 560px) {
+  .arrows .next {
+    right: 241px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .arrows .next {
+    right: 204px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+@media (min-width: 660px) {
+  .arrows .next {
+    right: 141px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 705px) {
+  .arrows .next {
+    right: 97px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+
+} */
+@media only screen and (max-width: 560px) {
+  .arrows .next {
+    right: 241px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  /* body {
+    background-color: red;
+  } */
+}
+/* 
+@media (min-width: 600px) {
+  .arrowsext { .n
+    right: 204px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 660px) {
+  .arrows .next {
+    right: 141px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 705px) {
+  .arrows .next {
+    right: 97px;
+    top: 10px;
+    display: block;
+    margin-right: auto;
+    max-width: 100%;
+  }
+} */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 788px;
+  }
+
+  .container .slide img {
+    width: 100%;
+    height: 587px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .arrows {
+    /* border: 1px solid red;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap; */
+  }
+
+  .arrows .next {
+    right: 0vw;
+    top: 10px;
+    /* display: block; */
+    /* margin-right: auto; */
+    /* max-width: 100%; */
+    position: fixed;
+  }
+
+  .arrows .prev {
+    position: absolute;
+    right: -300px;
+    top: 10px;
+  }
+
+  .hero-img {
+    width: 427px;
+    height: 460px;
+
+    position: relative;
+    right: 223px;
+    top: -89px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .new-balance {
+    margin-top: -47px;
+    margin-left: -38px;
+    grid-template-columns: 274px 300px;
+    grid-template-rows: 388px 200px;
+    display: grid;
+    /* background-color: red; */
+  }
+
+  /* Lunar Section */
+  .lunar-new-balance {
+    /* background-color: red; */
+
+    margin-top: 59px;
+  }
+  .lunar-text-section .hero-heading,
+  .lunar-text-section .lunar-text {
+    display: none;
+  }
+
+  .lunar-img {
+    position: relative;
+    z-index: -1;
+    left: 227px;
+
+    width: 477px;
+    height: 450px;
+  }
+
+  .gramicci-text-section {
+    display: none;
+  }
+
+  .reebok-text-section .hero-heading,
+  .reebok-text-section .reebok-text {
+    display: none;
+  }
+
+  .product-grid-two {
+    display: grid;
+    grid-template-columns: 272px 300px;
+    grid-template-rows: 393px 500px;
+    margin-top: 400px;
+    margin-left: -450px;
+  }
+
+  /* Gramicci Section */
+  .gramicci-section {
+    margin-top: -37px;
+  }
+
+  .gramicci-img {
+    width: 404px;
+    height: 400px;
+    position: relative;
+    z-index: -1;
+    left: -56px;
+  }
+
+  .product-grid.gramicci {
+    margin-top: 21px;
+    margin-left: -36px;
+    grid-template-columns: 273px 300px;
+    grid-template-rows: 400px 500px;
+  }
+
+  /* Reebok Section */
+  .reebok-section {
+    margin-top: -12px;
+  }
+
+  .reebok-img {
+    position: relative;
+    z-index: -1;
+    width: 404px;
+    height: 400px;
+    left: 171px;
+  }
+
+  .reebok-grid {
+    margin-top: 398px;
+    margin-left: -437px;
+    grid-template-columns: 278px 300px;
+    grid-template-rows: 395px 350px;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 120px;
+
+    height: 410px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .contact-header {
+    font-size: 13px;
+  }
+  .info-title {
+    font-size: 12px;
+  }
+
+  .socials-header {
+    font-size: 12px;
+  }
+
+  .footer-contact {
+    margin-top: -44px;
+    margin-right: -64px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  .footer-phone {
+    font-size: 14px;
+  }
+
+  .info-list {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    margin-left: -148px;
+  }
+
+  .footer-info {
+    margin-left: 55px;
+  }
+  .footer-socials {
+    margin-left: 2px;
+  }
+  .social {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  .hero-text-section p {
+    width: 157%;
+    /* color: red; */
+    /* border: 1px solid green; */
+    position: relative;
+    left: 20px;
+    margin-left: 15px;
+  }
+
+  .product-grid-two {
+    display: grid;
+    grid-template-columns: 184px 300px;
+    grid-template-rows: 241px 500px;
+    margin-top: 10px;
+    margin-left: -103px;
+  }
+
+  .hero-text-section .hero-heading.hide-mobile {
+    font-size: 26px;
+    display: block;
+  }
+
+  .hero-text-section .hero-text {
+    /* color: green; */
+    position: relative;
+    left: 44px;
+    display: block;
+  }
+
+  .product-card .product-img {
+    width: 151px;
+    height: 151px;
+    position: relative;
+    top: -24px;
+  }
+
+  .product-details {
+    position: relative;
+    top: -55px;
+  }
+
+  /* .product-grid {
+    grid-template-columns: 209px 300px;
+    grid-template-rows: 254px 350px;
+    margin-top: -74px;
+  } */
+
+  .hero-img {
+    width: 341px;
+    height: 461px;
+    position: relative;
+    left: 10px;
+    left: -59px;
+  }
+
+  .product-card {
+    width: 173px;
+    height: 232px;
+    overflow: hidden;
+  }
+
+  .product-grid {
+    margin-top: -65px;
+    grid-template-columns: 184px 300px;
+    grid-template-rows: 241px 500px;
+
+    gap: 10px;
+    margin-left: -17px;
+  }
+
+  /* Lunar Section */
+
+  .lunar-container {
+    margin-top: -234px;
+  }
+
+  .hero-heading.lunar {
+    position: relative;
+    left: 31px;
+  }
+
+  .lunar-img {
+    position: relative;
+    left: 73px;
+    width: 375px;
+    height: 461px;
+    z-index: -1;
+  }
+
+  .product-grid {
+    /* grid-template-columns: 1fr; */
+  }
+
+  .product-card-section {
+  }
+
+  /* .lunar-grid {
+    grid-template-columns: 195px 300px;
+    grid-template-rows: 246px 350px;
+    margin-left: -132px;
+    margin-left: -97px;
+  } */
+
+  .lunar-text-section .hero-heading,
+  .lunar-text-section .lunar-text {
+    display: block;
+  }
+
+  /* Gramicci Section */
+  .gramicci-section {
+    margin-top: 9px;
+  }
+
+  .gramicci-img {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    left: 6px;
+  }
+
+  .product-grid.gramicci {
+    margin-top: -166px;
+  }
+
+  .gramicci-text-section p.gramicci-text {
+    /* border: 1px solid red; */
+    width: 137px;
+  }
+
+  .gramicci-text-section {
+    /* color: red; */
+    width: 151px;
+    display: block;
+  }
+
+  /* Reebok Section */
+  .reebok-text-section .hero-heading,
+  .reebok-text-section .reebok-text {
+    display: block;
+  }
+
+  .reebok-section {
+    margin-top: -108px;
+  }
+
+  .reebok-img {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    left: 64px;
+  }
+
+  .reebok-grid {
+    grid-template-columns: 195px 300px;
+    /* grid-template-rows: 400px 500px; */
+    grid-template-rows: 252px 350px;
+    margin-left: -72px;
+  }
+
+  .footer-wrapper {
+    /* border: 1px solid red; */
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .footer-socials {
+    justify-content: right;
+  }
+
+  .footer-logo {
+    position: relative;
+    left: 20px;
+  }
+}
