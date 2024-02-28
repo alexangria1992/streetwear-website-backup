@@ -1,16 +1,21 @@
+/// Carousel Variables
 let slider = document.querySelector(".container .list");
 let items = document.querySelectorAll(".container .list .slide");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 const dots = document.querySelectorAll(".dot");
+
+//Header Navigation Variables
 const primaryHeader = document.querySelector(".primary-header");
 const scrollWatcher = document.createElement("div");
 
+// Mobile Navigation Variables
 const btnOpen = document.querySelector("#btnOpen");
 const btnClose = document.querySelector("#btnClose");
 const media = window.matchMedia("(width < 1024px)");
 const topNavMenu = document.querySelector(".topnav-menu");
 
+//Shopping Cart Variables
 // Carousel
 
 function clickMe() {
