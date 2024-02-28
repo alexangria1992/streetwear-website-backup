@@ -668,14 +668,58 @@ header ul li:hover .submenu {
   top: 0;
   opacity: 0;
   background-color: black;
-  z-index: 1;
+  z-index: 9999;
 }
 
-.product-card .overlay:hover {
-  opacity: 0.2;
-  background-color: black;
+.product-card:hover .overlay {
+  opacity: 0.5;
+  background-color: rgb(36, 35, 35);
   transition: 0.5s ease;
   cursor: pointer;
+}
+
+.product-card .product-description .overlay:hover {
+  display: none;
+}
+
+.overlay:hover .product-description {
+  z-index: -1;
+}
+
+.product-card:hover .parentElement {
+  /* display: block; */
+  transition: 2.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parentElement {
+  /* text-align: center; */
+
+  display: none;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 20px;
+  border: none;
+  padding: 30px 25px;
+  display: flex;
+  background-color: white;
+  border: 1px solid grey;
+  z-index: 9999;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: -5;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-img {

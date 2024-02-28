@@ -13,6 +13,10 @@ const topNavMenu = document.querySelector(".topnav-menu");
 
 // Carousel
 
+function clickMe() {
+  console.log("ive been clicked");
+}
+
 let active = 0;
 let lengthItems = items.length - 1;
 console.log(items);
