@@ -65,7 +65,7 @@ a {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  /* z-index: 1000; */
   /* background-color: white; */
 }
 
@@ -503,15 +503,18 @@ li:hover ul.submenu {
 .cart-sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
+  /* right: -100%; */
+
   width: 360px;
   min-height: 100vh;
   padding: 20px;
   background: white;
   transition: 0.3s;
+  z-index: 1000;
 }
 
-.cart-sdebar.active {
+.cart-sidebar.active {
   right: 0;
 }
 
@@ -549,6 +552,7 @@ li:hover ul.submenu {
 
 .cart-price {
   font-size: 1rem;
+  font-family: "Lato", sans-serif;
 }
 
 .cart-quantity {
@@ -572,10 +576,12 @@ li:hover ul.submenu {
 .total-title {
   font-size: 1rem;
   font-weight: 600;
+  font-family: "Lato", sans-serif;
 }
 
 .total-price {
   margin-left: 0.5rem;
+  font-family: "Lato", sans-serif;
 }
 
 .btn-buy {
