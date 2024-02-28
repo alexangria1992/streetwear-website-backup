@@ -82,8 +82,9 @@ function addCartClicked(event) {
   var button = event.target;
   console.log(button);
   var shopProducts = button.parentElement;
-  console.log(shopProducts);
-  var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
+  // console.log(shopProducts);
+  var title = shopProducts.getElementsByClassName("product-description")[0]
+    .innerText;
   var price = shopProducts.getElementsByClassName("product-price")[0].innerText;
   var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
 
@@ -92,7 +93,39 @@ function addCartClicked(event) {
   updatetotal();
 }
 
-function addProductToCart(title, price, productImg) {}
+function addProductToCart(title, price, productImg) {
+  var cartShopBox = document.createElement("div");
+  cartShopBox.classList.add("cart-box");
+  var cartItems = document.getElementsByClassName("cart-content")[0];
+  var cartItemsName = cartItems.getElementsByClassName("cart-product-title");
+  for (var i = 0; i < cartItemsName.length; i++) {
+    if (cartItemsName[i].innerText == title) {
+      alert("You have already added this item to cart");
+      return;
+    }
+  }
+  var cartBoxContent = `
+<img src="${productImg}" class="cart-img" alt="" />
+              <div class="detail-box">
+                <div class="cart-product-title">
+                  ${title}
+                </div>
+                <div class="cart-price">${price}</div>
+                <input type="number" value="1" class="cart-quantity" />
+              </div>
+
+              <i class="fa fa-trash cart-remove" aria-hidden="true"></i>
+`;
+  cartShopBox.innerHTML = cartBoxContent;
+  cartItems.append(cartShopBox);
+  cartShopBox
+    .getElementsByClassName("cart-remove")[0]
+    .addEventListener("click", removeCartItem);
+  cartShopBox
+    .getElementsByClassName("cart-quantity")[0]
+    .addEventListener("change", quantityChanged);
+}
+
 // Update Total
 function updatetotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
@@ -107,9 +140,9 @@ function updatetotal() {
     var quantity = quantityElement.value;
     total = total + price * quantity;
     // If price contain some cents value
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
   }
+  total = Math.round(total * 100) / 100;
+  document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
 
 // Carousel
