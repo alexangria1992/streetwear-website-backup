@@ -833,8 +833,13 @@ header ul li:hover .submenu {
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 
+.add-to-cart-btn:hover {
+  opacity: 1;
+  transition: 0.5s ease;
+}
 .product-img {
   transition: 0.2s ease;
   cursor: pointer;

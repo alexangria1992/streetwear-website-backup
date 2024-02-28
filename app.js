@@ -52,6 +52,12 @@ function ready() {
     var input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
+  // Add to Cart
+  var addCart = document.getElementsByClassName("add-to-cart-btn");
+  for (var i = 0; i < addCart.length; i++) {
+    var button = addCart[i];
+    button.addEventListener("click", addCartClicked);
+  }
 }
 
 // Remove Items From Cart
@@ -70,6 +76,23 @@ function quantityChanged(event) {
   updatetotal();
 }
 
+//Add to Cart
+function addCartClicked(event) {
+  console.log("ive been clicked");
+  var button = event.target;
+  console.log(button);
+  var shopProducts = button.parentElement;
+  console.log(shopProducts);
+  var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
+  var price = shopProducts.getElementsByClassName("product-price")[0].innerText;
+  var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
+
+  console.log(title, price, productImg);
+  addProductToCart(title, price, productImg);
+  updatetotal();
+}
+
+function addProductToCart(title, price, productImg) {}
 // Update Total
 function updatetotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
@@ -91,9 +114,9 @@ function updatetotal() {
 
 // Carousel
 
-function clickMe() {
-  console.log("i've been clicked");
-}
+// function clickMe() {
+//   console.log("i've been clicked");
+// }
 
 let active = 0;
 let lengthItems = items.length - 1;
