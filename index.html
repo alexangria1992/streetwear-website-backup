@@ -218,19 +218,19 @@
     <div class="container">
       <div class="list">
         <div class="slide">
-          <img src="./img/arcade.webp" alt="" />
+          <img src="./img/arcade.webp" class="arcade-img" alt="" />
           <div class="arcade-banner-text">
             <p class="banner-text">Arcade Summer '23</p>
           </div>
         </div>
         <div class="slide">
-          <img src="./img/carhartt.webp" alt="" />
+          <img src="./img/carhartt.webp" class="carhartt-img" alt="" />
           <div class="carhartt-banner-text">
             <p class="banner-text">Carhartt WIP</p>
           </div>
         </div>
         <div class="slide">
-          <img src="./img/new_balance.webp" alt="" />
+          <img src="./img/new_balance.webp" class="new-balance-img" />
           <div class="nb-banner-text">
             <p class="banner-text">
               New Balance Lunar New Year 2024 <br />
@@ -239,7 +239,7 @@
           </div>
         </div>
         <div class="slide">
-          <img src="./img/reebok.webp" alt="" />
+          <img src="./img/reebok.webp" alt="" class="slider-reebok-img" />
         </div>
       </div>
       <div class="dots-container">
@@ -285,6 +285,7 @@
                 <p class="product-title">New Balance</p>
 
                 <img class="product-img" src="./img/nb01.webp" alt="" />
+
                 <p class="product-description">990v Made in USA - Grey Black</p>
                 <p class="product-price">$370.00 <span>NZD</span></p>
                 <div class="overlay"></div>
@@ -314,24 +315,26 @@
               <div class="product-card">
                 <p class="product-title">New Balance</p>
                 <img class="product-img" src="./img/nb03.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">
-                    990v4 Made in USA - Grey Black
-                  </p>
-                  <p class="product-price">$370.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">
+                  990v4 Made in USA - Grey Black
+                </p>
+                <p class="product-price">$370.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <div class="product-card-section">
               <div class="product-card">
                 <p class="product-title">New Balance</p>
                 <img class="product-img" src="./img/nb04.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">
-                    990v Made in USA - Grey Black
-                  </p>
-                  <p class="product-price">$370.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">990v Made in USA - Grey Black</p>
+                <p class="product-price">$370.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -361,10 +364,12 @@
                       src="./img/nb-lunar01.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">1906N LNY - Sea Salt</p>
-                      <p class="product-price">$250.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">1906N LNY - Sea Salt</p>
+                    <p class="product-price">$250.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
 
@@ -376,10 +381,12 @@
                       src="./img/nb-lunar02.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">1906N LNY - Shell Pink</p>
-                      <p class="product-price">$250.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">1906N LNY - Shell Pink</p>
+                    <p class="product-price">$250.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
 
@@ -391,10 +398,12 @@
                       src="./img/nb-lunar03.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">610T LNY - Green</p>
-                      <p class="product-price">$200.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">610T LNY - Green</p>
+                    <p class="product-price">$200.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
                 <div class="product-card-section">
@@ -405,10 +414,12 @@
                       src="./img/nb-lunar04.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">610T LNY - Navy</p>
-                      <p class="product-price">$200.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">610T LNY - Navy</p>
+                    <p class="product-price">$200.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </div>
@@ -443,10 +454,12 @@
               <div class="product-card">
                 <p class="product-title">Gramicci</p>
                 <img class="product-img" src="./img/gramicci-01.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">G-Shorts - US Chino</p>
-                  <p class="product-price">$150.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">G-Shorts - US Chino</p>
+                <p class="product-price">$150.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
 
@@ -454,10 +467,12 @@
               <div class="product-card">
                 <p class="product-title">Gramicci</p>
                 <img class="product-img" src="./img/gramicci-02.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">G-Shorts - Dark Brown</p>
-                  <p class="product-price">$150.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">G-Shorts - Dark Brown</p>
+                <p class="product-price">$150.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
 
@@ -465,20 +480,24 @@
               <div class="product-card">
                 <p class="product-title">Gramicci</p>
                 <img class="product-img" src="./img/gramicci-03.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">G-Shorts - Stone</p>
-                  <p class="product-price">$150.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">G-Shorts - Stone</p>
+                <p class="product-price">$150.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
             <div class="product-card-section">
               <div class="product-card">
                 <p class="product-title">Gramicci</p>
                 <img class="product-img" src="./img/gramicci-04.webp" alt="" />
-                <div class="product-details">
-                  <p class="product-description">Summit Tee - White</p>
-                  <p class="product-price">$120.00 <span>NZD</span></p>
-                </div>
+                <p class="product-description">Summit Tee - White</p>
+                <p class="product-price">$120.00 <span>NZD</span></p>
+                <div class="overlay"></div>
+                <button id="add-cart" class="add-to-cart-btn">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -510,12 +529,14 @@
                       src="./img/reebok-01.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">
-                        Aries Classic Leather - Opal Glow
-                      </p>
-                      <p class="product-price">$220.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">
+                      Aries Classic Leather - Opal Glow
+                    </p>
+                    <p class="product-price">$220.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
 
@@ -527,12 +548,14 @@
                       src="./img/reebok-02.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">
-                        Eames Beatnik - Vintage Chalk
-                      </p>
-                      <p class="product-price">$200.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">
+                      Eames Beatnik - Vintage Chalk
+                    </p>
+                    <p class="product-price">$200.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
 
@@ -544,12 +567,14 @@
                       src="./img/reebok-03.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">
-                        Eames Beatnik - Alabaster Black
-                      </p>
-                      <p class="product-price">$200.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">
+                      Eames Beatnik - Alabaster Black
+                    </p>
+                    <p class="product-price">$200.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
                 <div class="product-card-section">
@@ -560,12 +585,14 @@
                       src="./img/reebok-04.webp"
                       alt=""
                     />
-                    <div class="product-details">
-                      <p class="product-description">
-                        ATR Pump Vertical - Black White
-                      </p>
-                      <p class="product-price">$300.00 <span>NZD</span></p>
-                    </div>
+                    <p class="product-description">
+                      ATR Pump Vertical - Black White
+                    </p>
+                    <p class="product-price">$300.00 <span>NZD</span></p>
+                    <div class="overlay"></div>
+                    <button id="add-cart" class="add-to-cart-btn">
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </div>

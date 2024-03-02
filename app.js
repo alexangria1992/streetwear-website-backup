@@ -40,36 +40,36 @@ if (document.readyState == "loading") {
 // Making function
 function ready() {
   // remove Items from Cart
-  var removeCartButtons = document.getElementsByClassName("cart-remove");
+  let removeCartButtons = document.getElementsByClassName("cart-remove");
   console.log(removeCartButtons);
-  for (var i = 0; i < removeCartButtons.length; i++) {
-    var button = removeCartButtons[i];
+  for (let i = 0; i < removeCartButtons.length; i++) {
+    let button = removeCartButtons[i];
     button.addEventListener("click", removeCartItem);
   }
   // Quantity Changes
-  var quantityInputs = document.getElementsByClassName("cart-quantity");
-  for (var i = 0; i < quantityInputs.length; i++) {
-    var input = quantityInputs[i];
+  let quantityInputs = document.getElementsByClassName("cart-quantity");
+  for (let i = 0; i < quantityInputs.length; i++) {
+    let input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
   // Add to Cart
-  var addCart = document.getElementsByClassName("add-to-cart-btn");
-  for (var i = 0; i < addCart.length; i++) {
-    var button = addCart[i];
+  let addCart = document.getElementsByClassName("add-to-cart-btn");
+  for (let i = 0; i < addCart.length; i++) {
+    let button = addCart[i];
     button.addEventListener("click", addCartClicked);
   }
 }
 
 // Remove Items From Cart
 function removeCartItem(event) {
-  var buttonClicked = event.target;
+  let buttonClicked = event.target;
   buttonClicked.parentElement.remove();
   updatetotal();
 }
 
 //Quantity Changes
 function quantityChanged(event) {
-  var input = event.target;
+  let input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
@@ -79,14 +79,14 @@ function quantityChanged(event) {
 //Add to Cart
 function addCartClicked(event) {
   console.log("ive been clicked");
-  var button = event.target;
+  let button = event.target;
   console.log(button);
-  var shopProducts = button.parentElement;
+  let shopProducts = button.parentElement;
   // console.log(shopProducts);
-  var title = shopProducts.getElementsByClassName("product-description")[0]
+  let title = shopProducts.getElementsByClassName("product-description")[0]
     .innerText;
-  var price = shopProducts.getElementsByClassName("product-price")[0].innerText;
-  var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
+  let price = shopProducts.getElementsByClassName("product-price")[0].innerText;
+  let productImg = shopProducts.getElementsByClassName("product-img")[0].src;
 
   console.log(title, price, productImg);
   addProductToCart(title, price, productImg);
@@ -94,17 +94,17 @@ function addCartClicked(event) {
 }
 
 function addProductToCart(title, price, productImg) {
-  var cartShopBox = document.createElement("div");
+  let cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
-  var cartItems = document.getElementsByClassName("cart-content")[0];
-  var cartItemsName = cartItems.getElementsByClassName("cart-product-title");
-  for (var i = 0; i < cartItemsName.length; i++) {
+  let cartItems = document.getElementsByClassName("cart-content")[0];
+  let cartItemsName = cartItems.getElementsByClassName("cart-product-title");
+  for (let i = 0; i < cartItemsName.length; i++) {
     if (cartItemsName[i].innerText == title) {
       alert("You have already added this item to cart");
       return;
     }
   }
-  var cartBoxContent = `
+  let cartBoxContent = `
 <img src="${productImg}" class="cart-img" alt="" />
               <div class="detail-box">
                 <div class="cart-product-title">
@@ -128,16 +128,16 @@ function addProductToCart(title, price, productImg) {
 
 // Update Total
 function updatetotal() {
-  var cartContent = document.getElementsByClassName("cart-content")[0];
+  let cartContent = document.getElementsByClassName("cart-content")[0];
   console.log(cartContent);
-  var cartBoxes = cartContent.getElementsByClassName("cart-box");
-  var total = 0;
-  for (var i = 0; i < cartBoxes.length; i++) {
-    var cartBox = cartBoxes[i];
-    var priceElement = cartBox.getElementsByClassName("cart-price")[0];
-    var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
-    var quantity = quantityElement.value;
+  let cartBoxes = cartContent.getElementsByClassName("cart-box");
+  let total = 0;
+  for (let i = 0; i < cartBoxes.length; i++) {
+    let cartBox = cartBoxes[i];
+    let priceElement = cartBox.getElementsByClassName("cart-price")[0];
+    let quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
+    let price = parseFloat(priceElement.innerText.replace("$", ""));
+    let quantity = quantityElement.value;
     total = total + price * quantity;
     // If price contain some cents value
   }
