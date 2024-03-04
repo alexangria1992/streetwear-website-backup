@@ -14,7 +14,7 @@ const btnOpen = document.querySelector("#btnOpen");
 const btnClose = document.querySelector("#btnClose");
 const media = window.matchMedia("(width < 1024px)");
 const topNavMenu = document.querySelector(".topnav-menu");
-
+const overlay = document.querySelector(".overlay");
 //Shopping Cart Variables
 let cartItem = document.querySelector("#cart-item");
 let cart = document.querySelector(".cart-sidebar");
@@ -210,6 +210,7 @@ function openMobileMenu() {
   topNavMenu.removeAttribute("inert");
   topNavMenu.removeAttribute("style");
   document.body.style.overflowY = "hidden";
+  overlay.style.display = "none";
 }
 
 function closeMobileMenu() {
