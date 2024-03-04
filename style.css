@@ -122,7 +122,7 @@ a {
   width: 30px;
   background-color: white;
 }
-/* .arcade-banner-text {
+.arcade-banner-text {
   position: absolute;
   color: white;
   top: 337px;
@@ -136,22 +136,24 @@ a {
 .carhartt-banner-text {
   position: absolute;
 
-  top: 337px;
-  left: 737px;
+  /* top: 337px; */
+  /* left: 737px; */
+  top: 544px;
+  left: 2100px;
   font-family: "Libre Caslon Text", serif;
   font-size: 30px;
   color: white;
-} */
+}
 
-/* .nb-banner-text {
+.nb-banner-text {
   position: absolute;
 
-  top: 92px;
-  left: 490px;
+  top: 175px;
+  left: 3190px;
   font-family: "Libre Caslon Text", serif;
   font-size: 30px;
   color: white;
-} */
+}
 
 /* .container .slide {
   display: none;
@@ -829,7 +831,7 @@ header ul li:hover .submenu {
   display: flex;
   background-color: white;
   border: 1px solid grey;
-  z-index: 9999;
+  z-index: 1;
   text-align: center;
   color: black;
   cursor: pointer;
@@ -1131,9 +1133,11 @@ p.footer-phone {
 }
 
 @media only screen and (max-width: 1024px) {
+  .mobile-cart-sidebar {
+    display: block;
+  }
   .mobile-logo {
     display: block;
-    /* background-color: red !important; */
     font-family: "Bebas Neue", sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1144,31 +1148,25 @@ p.footer-phone {
   .mobile-underline {
     border-bottom: 2px solid black;
   }
+
   header nav {
     background-color: black;
     position: fixed;
     inset: 0;
     flex-direction: column;
+    /* top: 100vh; */
     overflow: hidden;
+    touch-action: none;
 
     align-items: flex-start;
     translate: 100vw 0;
     transition: translate 0.5s ease-in-out;
-    /* display: none; */
+    z-index: 100;
   }
 
   .menu-btn-container {
-    /* border: 1px solid red; */
     display: flex;
-    /* background-color: red; */
-    /* flex-wrap: wrap; */
-    /* width: 76px;
-    height: 68px;
-    position: absolute;
-    right: 0;
-    padding: 20px 0; */
-    /* z-index: -100; */
-    /* display: block; */
+
     width: 76px;
     height: 68px;
     position: absolute;
@@ -1176,53 +1174,34 @@ p.footer-phone {
     padding: 20px 40px;
   }
 
-  /* .menu-btn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-  } */
   .menu-btn {
-    /* display: block;
-    color: black;
-    background: none;
-    border: none;
-    position: absolute;
-    right: 0;
-    top: 20px;
-    left: 870px; */
-    /* max-width: ; */
     background: none;
     border: none;
     display: block;
-    /* z-index: 2000; */
     cursor: pointer;
     color: black;
     position: absolute;
     right: 20px;
     top: 20px;
-    /* position: absolute;
-    right: 0;
-    top: 20px;
-    left: 835px;
-    max-width: 100%;
-    flex-wrap: wrap; */
   }
+
+  /* .cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    right: -100%;
+
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+    transition: 0.3s;
+    z-index: 1000;
+  } */
 
   .close-btn {
     display: block;
 
-    /* display: block; */
-    /* border: none;
-    background: none;
-    padding: 20px 40px;
-    width: 2.5rem; */
-    /* margin-inline-start: auto; */
-    /* margin-top: -223px;
-    margin-right: 79px;
-    overflow: hidden;  */
-    /* position: absolute;
-    left: 879px; */
     position: absolute;
     right: 20px;
     border: none;
@@ -1263,7 +1242,7 @@ p.footer-phone {
   }
 
   header nav .cart {
-    display: none;
+    display: block;
   }
 
   header {
@@ -1277,60 +1256,6 @@ p.footer-phone {
   }
 }
 
-/* //MEDIA QUERIES */
-
-/* @media (min-width: 500px) {
-
-
-
-
-
- 
-
-  
-}
-
-@media (min-width: 560px) {
-  .arrows .next {
-    right: 241px;
-    top: 10px;
-    display: block;
-    margin-right: auto;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 600px) {
-  .arrows .next {
-    right: 204px;
-    top: 10px;
-    display: block;
-    margin-right: auto;
-    max-width: 100%;
-  }
-}
-@media (min-width: 660px) {
-  .arrows .next {
-    right: 141px;
-    top: 10px;
-    display: block;
-    margin-right: auto;
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 705px) {
-  .arrows .next {
-    right: 97px;
-    top: 10px;
-    display: block;
-    margin-right: auto;
-    max-width: 100%;
-  }
-}
-
-
-} */
 @media only screen and (max-width: 560px) {
   .arrows .next {
     right: 241px;
@@ -1344,16 +1269,6 @@ p.footer-phone {
     background-color: red;
   } */
 }
-/* 
-@media (min-width: 600px) {
-  .arrowsext { .n
-    right: 204px;
-    top: 10px;
-    display: block;
-    margin-right: auto;
-    max-width: 100%;
-  }
-}
 
 @media (min-width: 660px) {
   .arrows .next {
@@ -1373,8 +1288,7 @@ p.footer-phone {
     margin-right: auto;
     max-width: 100%;
   }
-} */
-
+}
 @media only screen and (max-width: 767px) {
   .container {
     width: 788px;
@@ -1390,13 +1304,35 @@ p.footer-phone {
     object-position: center;
   }
 
-  .arrows {
-    /* border: 1px solid red;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap; */
+  .arcade-banner-text {
+    position: absolute;
+    color: white;
+    top: 337px;
+    left: 234px;
+    color: white;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 25px;
+    opacity: 0.9;
+  }
+
+  .carhartt-banner-text {
+    position: absolute;
+    /* top: 337px; */
+    /* left: 737px; */
+    top: 544px;
+    left: 1703px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 30px;
+    color: white;
+  }
+
+  .nb-banner-text {
+    position: absolute;
+    top: 175px;
+    left: 2535px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 23px;
+    color: white;
   }
 
   .arrows .next {
@@ -1570,10 +1506,10 @@ p.footer-phone {
   }
 }
 @media (min-width: 768px) and (max-width: 1020px) {
-  .container {
-    /* width: 788px; */
-    /* border: 1px solid lime; */
-  }
+  /* .container {
+    width: 788px;
+    border: 1px solid lime;
+  } */
 
   .carhartt-img {
     height: 800px;
@@ -1593,6 +1529,37 @@ p.footer-phone {
     position: relative;
     left: 20px;
     margin-left: 15px;
+  }
+
+  .arcade-banner-text {
+    position: absolute;
+    color: white;
+    top: 337px;
+    left: 529px;
+    color: white;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 25px;
+    opacity: 0.9;
+  }
+
+  .carhartt-banner-text {
+    position: absolute;
+    /* top: 337px; */
+    /* left: 737px; */
+    top: 544px;
+    left: 1338px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 30px;
+    color: white;
+  }
+
+  .nb-banner-text {
+    position: absolute;
+    top: 175px;
+    left: 1896px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 30px;
+    color: white;
   }
 
   .product-grid-two {
@@ -1759,5 +1726,35 @@ p.footer-phone {
   .footer-logo {
     position: relative;
     left: 20px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1200px) {
+  .new-balance-img {
+    height: 900px;
+  }
+  .carhartt-img {
+    height: 900px;
+  }
+  .slider-reebok-img {
+    height: 900px;
+  }
+  .carhartt-banner-text {
+    position: absolute;
+    /* top: 337px; */
+    /* left: 737px; */
+    top: 544px;
+    left: 1781px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 30px;
+    color: white;
+  }
+  .nb-banner-text {
+    position: absolute;
+    top: 175px;
+    left: 2455px;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 30px;
+    color: white;
   }
 }

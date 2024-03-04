@@ -19,7 +19,6 @@ const topNavMenu = document.querySelector(".topnav-menu");
 let cartItem = document.querySelector("#cart-item");
 let cart = document.querySelector(".cart-sidebar");
 let closeCart = document.querySelector("#close-cart");
-
 // Cart Sidebar Open
 cartItem.onclick = () => {
   cart.classList.add("active");
@@ -210,11 +209,13 @@ function openMobileMenu() {
   btnOpen.setAttribute("aria-expanded", "true");
   topNavMenu.removeAttribute("inert");
   topNavMenu.removeAttribute("style");
+  document.body.style.overflowY = "hidden";
 }
 
 function closeMobileMenu() {
   btnOpen.setAttribute("aria-expanded", "false");
   topNavMenu.setAttribute("inert", "");
+  document.body.style.overflowY = "visible";
 
   setTimeout(() => {
     topNavMenu.style.transition = "none";
