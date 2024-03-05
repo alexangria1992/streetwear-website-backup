@@ -19,6 +19,8 @@ const overlay = document.querySelector(".overlay");
 let cartItem = document.querySelector("#cart-item");
 let cart = document.querySelector(".cart-sidebar");
 let closeCart = document.querySelector("#close-cart");
+let quantityIcon = document.querySelector(".quantity");
+console.log(quantityIcon);
 // Cart Sidebar Open
 cartItem.onclick = () => {
   cart.classList.add("active");
@@ -55,14 +57,31 @@ function ready() {
   let addCart = document.getElementsByClassName("add-to-cart-btn");
   for (let i = 0; i < addCart.length; i++) {
     let button = addCart[i];
+    // console.log(addCart[i]);
     button.addEventListener("click", addCartClicked);
   }
+
+  // Buy Button
+  document
+    .getElementsByClassName("btn-buy")[0]
+    .addEventListener("click", buyButtonClicked);
+}
+
+// Buy Button
+function buyButtonClicked() {
+  alert("Your Order is placed");
+  let cartContent = document.getElementsByClassName("cart-content")[0];
+  while (cartContent.hasChildNodes()) {
+    cartContent.removeChild(cartContent.firstChild);
+  }
+  updateTotal();
 }
 
 // Remove Items From Cart
 function removeCartItem(event) {
   let buttonClicked = event.target;
   buttonClicked.parentElement.remove();
+  decreaseCount();
   updatetotal();
 }
 
@@ -88,8 +107,35 @@ function addCartClicked(event) {
   let productImg = shopProducts.getElementsByClassName("product-img")[0].src;
 
   console.log(title, price, productImg);
+  cartCount();
   addProductToCart(title, price, productImg);
   updatetotal();
+}
+
+function decreaseCount() {
+  let prodCount = localStorage.getItem("cartsCount");
+  prodCount = parseInt(prodCount);
+  // console.log(typeof prodCount);
+  if (prodCount) {
+    localStorage.setItem("cartsCount", prodCount - 1);
+    quantityIcon.textContent = prodCount - 1;
+  } else {
+    localStorage.setItem("cartsCount", 1);
+    quantityIcon.textContent = prodCount = 1;
+  }
+}
+
+function cartCount() {
+  let prodCount = localStorage.getItem("cartsCount");
+  prodCount = parseInt(prodCount);
+  // console.log(typeof prodCount);
+  if (prodCount) {
+    localStorage.setItem("cartsCount", prodCount + 1);
+    quantityIcon.textContent = prodCount + 1;
+  } else {
+    localStorage.setItem("cartsCount", 1);
+    quantityIcon.textContent = prodCount = 1;
+  }
 }
 
 function addProductToCart(title, price, productImg) {
